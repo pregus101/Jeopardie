@@ -40,39 +40,39 @@ const categories = [
 
 const clueRows = [
   [
-    clue("$100", "What is solar energy?", "Energy from sunlight."),
-    clue("$100", "What is wind power?", "Energy from moving air."),
-    clue("$100", "2 + 2?", "4"),
-    clue("$100", "What color is the sky?", "Usually blue."),
-    clue("$100", "What planet do we live on?", "Earth."),
+    clue("$100", "What is solar energy?", "Energy from sunlight."), //column 1
+    clue("$100", "What is wind power?", "Energy from moving air."), //column 2
+    clue("$100", "2 + 2?", "4"), //column 3
+    clue("$100", "What color is the sky?", "Usually blue."), //column 4
+    clue("$100", "What planet do we live on?", "Earth."), //column 5
   ],
   [
-    clue("$200", "Edit question 1", "Edit answer 1"),
-    clue("$200", "Edit question 2", "Edit answer 2"),
-    clue("$200", "Edit question 3", "Edit answer 3"),
-    clue("$200", "Edit question 4", "Edit answer 4"),
-    clue("$200", "Edit question 5", "Edit answer 5"),
+    clue("$200", "Edit question 1", "Edit answer 1"), //column 1
+    clue("$200", "Edit question 2", "Edit answer 2"), //column 2
+    clue("$200", "Edit question 3", "Edit answer 3"), //column 3
+    clue("$200", "Edit question 4", "Edit answer 4"), //column 4
+    clue("$200", "Edit question 5", "Edit answer 5"), //column 5
   ],
   [
-    clue("$300", "Edit question 6", "Edit answer 6"),
-    clue("$300", "Edit question 7", "Edit answer 7"),
-    clue("$300", "Edit question 8", "Edit answer 8"),
-    clue("$300", "Edit question 9", "Edit answer 9"),
-    clue("$300", "Edit question 10", "Edit answer 10"),
+    clue("$300", "Edit question 6", "Edit answer 6"), //column 1
+    clue("$300", "Edit question 7", "Edit answer 7"), //column 2
+    clue("$300", "Edit question 8", "Edit answer 8"), //column 3
+    clue("$300", "Edit question 9", "Edit answer 9"), //column 4
+    clue("$300", "Edit question 10", "Edit answer 10"), //column 5
   ],
   [
-    clue("$400", "Edit question 11", "Edit answer 11"),
-    clue("$400", "Edit question 12", "Edit answer 12"),
-    clue("$400", "Edit question 13", "Edit answer 13"),
-    clue("$400", "Edit question 14", "Edit answer 14"),
-    clue("$400", "Edit question 15", "Edit answer 15"),
+    clue("$400", "Edit question 11", "Edit answer 11"), //column 1
+    clue("$400", "Edit question 12", "Edit answer 12"), //column 2
+    clue("$400", "Edit question 13", "Edit answer 13"), //column 3
+    clue("$400", "Edit question 14", "Edit answer 14"), //column 4
+    clue("$400", "Edit question 15", "Edit answer 15"), //column 5
   ],
   [
-    clue("$500", "Edit question 16", "Edit answer 16"),
-    clue("$500", "Edit question 17", "Edit answer 17"),
-    clue("$500", "Edit question 18", "Edit answer 18"),
-    clue("$500", "Edit question 19", "Edit answer 19"),
-    clue("$500", "Edit question 20", "Edit answer 20"),
+    clue("$500", "Edit question 16", "Edit answer 16"), //column 1
+    clue("$500", "Edit question 17", "Edit answer 17"), //column 2
+    clue("$500", "Edit question 18", "Edit answer 18"), //column 3
+    clue("$500", "Edit question 19", "Edit answer 19"), //column 4
+    clue("$500", "Edit question 20", "Edit answer 20"), //column 5
   ],
 ];
 
@@ -80,7 +80,7 @@ const clueRows = [
 
 
 
-
+//appears after you finish all other questions (click question and then click esc to skip it)
 const finalJeopardy = {
   question: "Write your Final Jeopardy question here.",
   answer: "Write your Final Jeopardy answer here.",
