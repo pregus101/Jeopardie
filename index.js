@@ -4,8 +4,6 @@ const QUESTION_SECONDS = 30;
 const FINAL_SECONDS = 120;
 const FINAL_ROW = 5;
 const FINAL_COL = 2;
-
-// Sounds
 const revealSound = new Audio("reveal.mp3");
 revealSound.preload = "auto";
 
@@ -13,7 +11,6 @@ const finalSound = new Audio("final.mp3");
 finalSound.preload = "auto";
 finalSound.loop = true;
 
-// Helpers
 const clue = (text, question, answer, extra = {}) => ({
   text,
   color: "#11f",
@@ -23,8 +20,6 @@ const clue = (text, question, answer, extra = {}) => ({
   answer,
   ...extra,
 });
-
-// Categories (row 0)
 const categories = [
   { text: "Renewable Energy", color: "#55a", textColor: "#fb2", textSize: "24px" },
   { text: "Solar, Wind, and Hydroelectricity", color: "#55a", textColor: "#fb2", textSize: "22px" },
@@ -33,8 +28,16 @@ const categories = [
   { text: "Totally normal questions that will shake you to the core with the sheer amount of normailty they exude", color: "#55a", textColor: "#fb2", textSize: "18px" },
 ];
 
-// Clues (rows 1–5)
-// Bottom-middle is a normal clue first, then turns into Final Jeopardy later.
+
+
+
+
+//THE REALLY IMPORTANT PART
+//PUT THE QUESTIONS HERE IF I FELL THE FUCK ASLEEP
+
+
+
+
 const clueRows = [
   [
     clue("$100", "What is solar energy?", "Energy from sunlight."),
@@ -73,13 +76,16 @@ const clueRows = [
   ],
 ];
 
-// Final Jeopardy
+
+
+
+
+
 const finalJeopardy = {
   question: "Write your Final Jeopardy question here.",
   answer: "Write your Final Jeopardy answer here.",
 };
 
-// DOM
 const grid = document.getElementById("grid");
 const overlay = document.getElementById("overlay");
 const overlayTitle = document.getElementById("overlay-title");
@@ -91,16 +97,13 @@ const timerEl = document.getElementById("timer");
 grid.style.setProperty("--cols", COLS);
 grid.style.setProperty("--rows", ROWS);
 
-// State
 let answerVisible = false;
 let countdown = null;
 let seconds = 0;
-let mode = null; // "regular" | "final"
+let mode = null;
 let used = 0;
 let finalUnlocked = false;
 let finalTileEl = null;
-
-// All 25 are real clues now
 const totalClues = clueRows.flat().length;
 
 function stopTimer() {
@@ -210,7 +213,6 @@ function closeOverlay() {
   answerVisible = false;
 }
 
-// Build board
 const allRows = [categories, ...clueRows];
 
 for (let r = 0; r < ROWS; r++) {
@@ -250,15 +252,11 @@ for (let r = 0; r < ROWS; r++) {
     grid.appendChild(cell);
   }
 }
-
-// Add Final Jeopardy click behavior to the same bottom-middle square
 if (finalTileEl) {
   finalTileEl.addEventListener("click", () => {
     if (finalUnlocked) openFinal();
   });
 }
-
-// Controls
 window.addEventListener("keydown", (e) => {
   if (overlay.classList.contains("hidden")) return;
 
